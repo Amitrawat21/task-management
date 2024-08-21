@@ -23,7 +23,7 @@ app.use(fileUpload({ useTempFiles: true, tempFileDir: "/tmp/" }));
 app.use("/user", userrouter);
 app.use("/task", taskrouter);
 
-const port = process.env.PORT || 8000;
+const port = process.env.PORT || 3000;
 
 cloudinary.v2.config({
   cloud_name: process.env.CLOUDINARY_CLIENT_NAME,
