@@ -18,7 +18,7 @@ const AdditionalInfo = () => {
     setIsAdmin(item);
     try {
       const response = await axios.put(
-        `http://localhost:8000/user/admin/${data.user._id}`,
+        `https://task-management-3-8mok.onrender.com/user/admin/${data.user._id}`,
         { isAdmin: item }
       );
 

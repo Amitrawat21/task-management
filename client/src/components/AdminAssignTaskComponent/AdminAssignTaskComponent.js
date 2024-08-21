@@ -15,7 +15,7 @@ const AdminAssignTaskComponent = () => {
       };
 
   const getData = async () => {
-    const response = await axios.get(`http://localhost:8000/user/Getadminassigntask/${user._id}`
+    const response = await axios.get(`https://task-management-3-8mok.onrender.com/user/Getadminassigntask/${user._id}`
     );
 
     setData(response.data.adminAssignedTasks)
