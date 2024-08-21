@@ -78,7 +78,7 @@ const Register = ({ setAllow }) => {
 
       try {
         const response = await axios.post(
-          "https://task-management-3-8mok.onrender.com/user/register",
+          "https://task-management-p67w.onrender.com/user/register",
           data,
           {
             withCredentials: true,
