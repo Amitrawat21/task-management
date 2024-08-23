@@ -44,7 +44,7 @@ const Register = ({ setAllow }) => {
   };
 
   const adminexit = async () => {
-    const response = await axios.get("https://task-management-3-8mok.onrender.com/user/adminExit");
+    const response = await axios.get("https://task-management-72p1.onrender.com/user/adminExit");
     setAdminExit(response.data.success);
   };
 
@@ -78,7 +78,7 @@ const Register = ({ setAllow }) => {
 
       try {
         const response = await axios.post(
-          "https://task-management-p67w.onrender.com/user/register",
+          "https://task-management-72p1.onrender.com/user/register",
           data,
           {
             withCredentials: true,

@@ -13,7 +13,7 @@ export const getMyTasks = createAsyncThunk(
   'task/getMyTasks',
   async (userId, thunkAPI) => {
     try {
-      const response = await axios.get(`https://task-management-3-8mok.onrender.com/task/mytask/${userId}`);
+      const response = await axios.get(`https://task-management-72p1.onrender.com/task/mytask/${userId}`);
       return response.data.tasks;
     } catch (error) {
       console.error('Error fetching tasks:', error);
@@ -29,7 +29,7 @@ export const removetask = createAsyncThunk(
   "task/removetask",
   async (id, thunkAPI) => {
     try {
-      const response = await axios.put(`https://task-management-3-8mok.onrender.com/task/trash/${id}`);
+      const response = await axios.put(`https://task-management-72p1.onrender.com/task/trash/${id}`);
       if (response.status === 200) {
         return id; // Return the id of the trashed task
       }

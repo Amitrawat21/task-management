@@ -38,7 +38,7 @@ const Card = ({ item, activeCardId, setActiveCardId, amit }) => {
 
 
 
-    if (timeDifference > 0.1) {
+    if (timeDifference > 0.1  && startTimeDifference <1 ) {
       return `You have only ${timeDifference} days left`;
     }
       else if(startTimeDifference > 1){
@@ -62,7 +62,7 @@ const Card = ({ item, activeCardId, setActiveCardId, amit }) => {
 
   const setFavourite = async () => {
     const response = await axios.put(
-      `https://task-management-3-8mok.onrender.com/task/favourite/${item._id}`
+      `https://task-management-72p1.onrender.com/task/favourite/${item._id}`
     );
 
     if (response.status === 200) {
@@ -145,7 +145,7 @@ const Card = ({ item, activeCardId, setActiveCardId, amit }) => {
         </div>
         <div className="cardWrapperBottom">
         <h4>
-  {item.status === 'completed' ? time(item.createdAt, item.submitDate) === "You have not submitted yet"? 'late submission': 'task completed' : time(item.createdAt, item.submitDate) }  {item.status === 'todo'? ` ${time(item.createdAt)}`:""}
+  {item.status === 'completed' ? time(item.createdAt, item.submitDate) === "You have not submitted yet"? 'late submission': 'task completed' : time(item.createdAt, item.submitDate) } 
 </h4>
 
           <button

@@ -14,6 +14,7 @@ const AdminSideBar = () => {
   const { user } = useSelector((state) => state.auth);
   const[showSideBar , setShowSideBar] = useState(true)
   const dispatch = useDispatch();
+  const location = useLocation();
   const navigate = useNavigate();
   const handleSectionClick = (type) => {
     setActiveSection(type);
@@ -22,6 +23,7 @@ const AdminSideBar = () => {
   const Logout = async () => {
     await dispatch(logout());
     navigate("/");
+    window.history.replaceState(null, null, "/"); 
 
   };
 
@@ -29,6 +31,24 @@ const AdminSideBar = () => {
   const handleSidebar = ()=>{
     setShowSideBar(!showSideBar)
   }
+
+  useEffect(() => {
+    // Disable the back button
+    window.onpopstate = (event) => {
+      navigate("/"); // Force redirect to login
+    };
+  }, [navigate]);
+
+  useEffect(() => {
+    const path =
+      location.pathname.split("/")[2] || location.pathname.split("/")[1]; // Get the second part of the path
+    if (path) {
+      setActiveSection(path);
+    }
+  }, [location]);
+
+
+
 
 
 
@@ -52,9 +72,9 @@ const AdminSideBar = () => {
           <Link className="link-admin" to="/AdminDashboard">
             <div
               className={`section-admin ${
-                activeSection === "dashboard-admin" ? "focused-admin" : ""
+                activeSection === "AdminDashboard" ? "focused-admin" : ""
               }`}
-              onClick={() => handleSectionClick("dashboard-admin")}
+              onClick={() => handleSectionClick("AdminDashboard")}
               tabIndex={0}
             >
               <DashboardIcon
@@ -70,9 +90,9 @@ const AdminSideBar = () => {
           <Link className="link-admin" to="/AdminUser">
             <div
               className={`section-admin ${
-                activeSection === "admin-user" ? "focused-admin" : ""
+                activeSection === "AdminUser" ? "focused-admin" : ""
               }`}
-              onClick={() => handleSectionClick("admin-user")}
+              onClick={() => handleSectionClick("AdminUser")}
               tabIndex={0}
             >
               <GroupIcon

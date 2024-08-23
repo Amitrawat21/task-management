@@ -36,7 +36,7 @@ function App() {
 {user && user.isAdmin === false ? (
         showSidebar && <Sidebar className="sidebar" />
       ) : (
-        user && <AdminSideBar />
+        user && showSidebar && <AdminSideBar />
       )}
         <div className="main-content">
           <Routes>
@@ -47,7 +47,6 @@ function App() {
             <Route path="/task/:status" element={<Task/>} />
             <Route path="/Card/:id" element={<CardDetail/>} />
             <Route path="/trashed" element={<Trashed/>} />
-           
             <Route path="/AdditionalInfo" element={<AdditionalInfo/>} />
             <Route path="/AdminDashboard" element={<AdminDashBoard/>} />
             <Route path="/AdminUser" element={<AdminUser/>} />

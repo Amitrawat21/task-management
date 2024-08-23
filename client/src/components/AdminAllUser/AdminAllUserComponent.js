@@ -33,7 +33,7 @@ const AdminAllUserComponent = () => {
   const fetchAllUsers = async () => {
     try {
       setLoading(true);
-      const response = await axios.get("https://task-management-3-8mok.onrender.com/user/allUser");
+      const response = await axios.get("https://task-management-72p1.onrender.com/user/allUser");
       setAllUser(response.data.allUser);
     } catch (error) {
       console.error("Error fetching users:", error);
@@ -46,13 +46,12 @@ const AdminAllUserComponent = () => {
     fetchAllUsers();
     dispatch(getUser({ adminId }));
     dispatch(getAdminTask({ adminId }));
-  }, []);
+  }, [dispatch, adminId]);
 
 
   const showUser = () => {
     setOpen(true);
   };
-  console.log(adminAllUsers, "kkkkkkkkk");
 
   const handleUser = async (userId) => {
     const updatedUsers = allUser.map((user) =>
@@ -67,17 +66,20 @@ const AdminAllUserComponent = () => {
     dispatch(getAdminTask({ adminId })); // Fetch updated user list after adding/removing
   };
 
-  function prePage() {
+  function prePage(e) {
+    e.preventDefault(); // Prevent default navigation behavior
     if (currentPage > 1) {
       SetcurrentPage(currentPage - 1);
     }
   }
 
-  function changeCPage(id) {
+  function changeCPage(e, id) {
+    e.preventDefault(); // Prevent default navigation behavior
     SetcurrentPage(id);
   }
 
-  function nextPage() {
+  function nextPage(e) {
+    e.preventDefault(); // Prevent default navigation behavior
     if (currentPage < nPage) {
       SetcurrentPage(currentPage + 1);
     }
@@ -115,7 +117,7 @@ const AdminAllUserComponent = () => {
             records.map((ele) => <UserCard key={ele._id} ele={ele} />)}
         </div>
       ) : (
-        <img src={nouser} />
+        <img src={nouser} alt="No users available" />
       )}
 
       <div className={open ? "userss" : "userss-none"}>
@@ -172,7 +174,7 @@ const AdminAllUserComponent = () => {
                 <a
                   href="#"
                   className="page-link"
-                  onClick={() => changeCPage(n)}
+                  onClick={(e) => changeCPage(e, n)}
                 >
                   {n}
                 </a>

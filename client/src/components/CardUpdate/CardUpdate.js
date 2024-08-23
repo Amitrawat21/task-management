@@ -34,7 +34,7 @@ const CardUpdate = ({setShowEditCard , item  , setActiveCardId}) => {
 const handleEditSubmit =  async (e)=>{
   e.preventDefault()
 
-  const response = await axios.put(`https://task-management-3-8mok.onrender.com/task/update/${item._id}`, {
+  const response = await axios.put(`https://task-management-72p1.onrender.com/task/update/${item._id}`, {
     ...updateData,
     submitDateByUser: {
       date: new Date(),

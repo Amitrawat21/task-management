@@ -33,7 +33,7 @@ const CreateTaskCard = ({ open, setOpen }) => {
     e.preventDefault();
     try {
       const response = await axios.post(
-        "https://task-management-3-8mok.onrender.com/task/create",
+        "https://task-management-72p1.onrender.com/task/create",
         { ...taskCreate, createdBy: user._id },
         {
           withCredentials: true,
