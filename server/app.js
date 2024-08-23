@@ -11,12 +11,7 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors({
-  origin: 'https://task-management-three-theta.vercel.app', // Replace with your Vercel domain
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Specify allowed methods
-  credentials: true, // If you're using cookies or HTTP authentication
-}));
-
+app.use(cors());
 app.use(express.json());
 app.use(cookieParser());
 app.use(express.urlencoded({ extended: true }));
