@@ -124,7 +124,11 @@
   }
 
   .task-date {
-    gap: 1px;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    justify-content: space-between;
+   width: 80px;
   }
 
   .task-date h5{

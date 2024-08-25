@@ -35,7 +35,7 @@ const Dashboard = () => {
       } else if (screenWidth <= 800) {
         setChartSize({ width: screenWidth - 50, height: 250 });
       } else {
-        setChartSize({ width: 500, height: 300 });
+        setChartSize({ width: 800, height: 300 });
       }
     };
 
@@ -86,15 +86,15 @@ const Dashboard = () => {
             <div className="box-info">
               <h5>TODO TASKS</h5>
               <h4>{todoTasks.length}</h4>
-              <h4>11 month</h4>
+            
             </div>
-            <ListAltIcon style={{ backgroundColor: "blue", color: "white" }} />
+            <ListAltIcon style={{ backgroundColor: "blue", color: "white" }} className="boxx" />
           </div>
           <div className="box">
             <div className="box-info">
               <h5>COMPLETED TASKS</h5>
               <h4>{completedTasks.length}</h4>
-              <h4>11 month</h4>
+          
             </div>
             <TaskIcon style={{ backgroundColor: "green", color: "white" }} />
           </div>
@@ -102,7 +102,7 @@ const Dashboard = () => {
             <div className="box-info">
               <h5>INCOMPLETE TASKS</h5>
               <h4>{incompleteTasks.length}</h4>
-              <h4>11 month</h4>
+          
             </div>
             <ListAltIcon style={{ backgroundColor: "red", color: "white" }} />
           </div>
@@ -110,7 +110,7 @@ const Dashboard = () => {
             <div className="box-info">
               <h5>IN PROGRESS TASKS</h5>
               <h4>{progressTasks.length}</h4>
-              <h4>11 month</h4>
+             
             </div>
             <StarsIcon style={{ backgroundColor: "orange", color: "white" }} />
           </div>
@@ -120,12 +120,7 @@ const Dashboard = () => {
             width={chartSize.width}
             height={chartSize.height}
             data={data}
-            margin={{
-              top: 5,
-              right: 30,
-              left: 60,
-              bottom: 5,
-            }}
+          
             barSize={chartSize.width / data.length - 10}
           >
             <XAxis dataKey="name" />

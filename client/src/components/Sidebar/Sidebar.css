@@ -91,7 +91,7 @@
     .sidebarContainer{
         height: 100vh;
         width: 40vw;
-    
+        padding: 50px 10px;
         overflow-y: auto;
         position: fixed;
         top: 0;
@@ -144,8 +144,8 @@
 @media (max-width: 500px) {
     .sidebarContainer{
         height: 100vh;
-        width: 40vw;
-    
+        width: 50vw;
+     padding: 2px 4px;
         overflow-y: auto;
         position: fixed;
         top: 0;
@@ -158,6 +158,31 @@
        
 
     }
+
+    .sidebarWrapper {
+       
+        gap: 30px;
+      
+        width: 165px;
+    }
+    .upper p {
+      
+        font-size: 12px;
+        font-weight: 700;
+    }
+
+
+    .section {
+        display: flex;
+        gap: 2px;
+        padding: 1px;
+        border-radius: 15px;
+        width: 155px;
+       
+     
+     
+    }
+    
 }
 
 
