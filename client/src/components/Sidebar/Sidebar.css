@@ -15,7 +15,7 @@
 .sidebarWrapper {
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 40px;
 }
 
 .upper {
