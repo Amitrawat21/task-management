@@ -72,3 +72,42 @@
     color: rgb(148, 148, 148);
 }
 
+
+
+@media (max-width: 500px) {
+    .CardDetail-Wrapper{
+       
+        margin: auto;
+     
+      
+    
+    }
+
+    
+.CardDetail-Container{
+  display: flex;
+  flex-direction: column;
+ justify-content: flex-start;
+ align-items: flex-start;
+
+
+    
+}
+
+.CardDetail-Container h2{
+   
+    margin-left: 13px;
+}
+
+
+.Details-priority h3{
+ font-size: 12px;
+}
+
+.Details-progress h3{
+    font-size: 10px;
+
+
+}
+
+}

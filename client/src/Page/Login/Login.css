@@ -169,3 +169,12 @@
     display: none;
   }
 }
+
+@media (max-width: 500px) {
+  .loginContainer {
+   
+    background-color: rgb(102, 103, 164);
+    height: 100vh;
+  }
+  
+}

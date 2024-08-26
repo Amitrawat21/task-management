@@ -224,6 +224,10 @@ button {
   
     width: 70%;
   }
+  .cross {
+    width: 160px;
 
+    text-align: end;
+  }
 
 }

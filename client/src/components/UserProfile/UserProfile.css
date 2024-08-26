@@ -230,8 +230,8 @@
     padding: 5px;
     gap: 20px;
     position: absolute;
-    top: 28%;
-    right: 11%;
+    top: 30%;
+    right: 9%;
   }
 
   .taskssShowOption h3 {
@@ -254,7 +254,7 @@
   .listproduct-format-main {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Six equal columns */
-    gap: 10px; /* Spacing between columns */
+    gap: 1px; /* Spacing between columns */
     padding: 20px 0; /* Top and bottom padding */
     color: #454544; /* Text color */
     font-size: 12px;
