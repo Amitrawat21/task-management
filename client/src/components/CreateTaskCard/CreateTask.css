@@ -128,7 +128,8 @@
       }
 
       .taskDate .input {
-        width: 100px;
+        width: 70px;
+        background-color: red;
       }
 
       .taskStage select{
