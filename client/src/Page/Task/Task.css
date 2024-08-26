@@ -64,7 +64,8 @@
     gap: 5px;
     background-color: white;
     width: 30%;
-    padding: 6px;
+    padding: 4px;
+    font-size: 23px;
   }
   
   .allTask {
@@ -109,5 +110,9 @@
   
     }
 
+    .signCircle {
+    
+      font-size: 13px;
+    }
 
   }

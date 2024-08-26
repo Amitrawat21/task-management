@@ -86,9 +86,9 @@
   }
   .listproduct-format-maink {
     grid-template-columns:  1fr 0.5fr 0.5fr ; /* Six equal columns */
-    gap: 100px; /* Spacing between columns */
+    gap: 50px; /* Spacing between columns */
     padding: 20px 0; /* Top and bottom padding */
-    background-color: aqua;
+ 
 
     font-size: 10px;
 

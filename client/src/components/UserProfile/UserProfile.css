@@ -8,7 +8,6 @@
   gap: 20px;
 }
 
-
 .UserProfil-container-mid {
   display: flex;
   padding: 9px;
@@ -21,7 +20,6 @@
   flex: 1.5;
   justify-content: center;
   align-items: center;
- 
 }
 .UserProfil-container-mid-left img {
   width: 170px;
@@ -64,11 +62,11 @@
   scrollbar-width: none; /* For Firefox */
 }
 
-.aaa h1{
+.aaa h1 {
   background-color: rgb(234, 234, 234);
   text-align: center;
   padding: 5px;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
 .aaa::-webkit-scrollbar {
@@ -129,8 +127,8 @@
   padding: 5px;
   gap: 20px;
   position: absolute;
-  top: 26%;
-  right: 25%;
+  top: 30%;
+  right: 26.5%;
 }
 
 .taskssShowOption {
@@ -165,11 +163,9 @@
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 
-
 @media (max-width: 500px) {
   .UserProfil-container {
-
-    width: 420px;
+    width: 300px;
     height: 500px;
 
     padding: 5px 5px;
@@ -177,22 +173,17 @@
   }
 
   .UserProfil-container-mid {
- 
     padding: 5px;
- gap: 1px;
-   
+    gap: 1px;
   }
 
   .UserProfil-container-mid-left {
-
-    flex: 1;
- 
-   
+    flex: 0.5;
   }
 
   .UserProfil-container-mid-right {
     display: flex;
-    flex: 1;
+    margin-left: 25px;
     flex-direction: column;
   }
 
@@ -205,77 +196,75 @@
     width: 70px;
   }
 
-  .UserProfil-container-mid-left h2{
+  .UserProfil-container-mid-left h2 {
     font-size: 14px;
-
   }
 
-  .UserProfil-container-mid-left span{
+  .UserProfil-container-mid-left span {
     font-size: 10px;
   }
 
   .info h3 {
     font-weight: 700;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
     font-size: 14px;
   }
   .info h4 {
     font-size: 11px;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+      sans-serif;
   }
-  
-  
-.UserProfil-container-mid-right button {
-  background-color: red;
-  width: 45px;
-  padding: 1px;
- font-size: 12px;
 
+  .UserProfil-container-mid-right button {
+    width: 45px;
+    padding: 1px;
+    font-size: 12px;
 
-  margin-right: 1px;
-  margin-top: 10px;
-}
+    margin-right: 1px;
+    margin-top: 10px;
+  }
 
+  .sendTask {
+    width: 200px;
+    padding: 5px;
+    gap: 20px;
+    position: absolute;
+    top: 28%;
+    right: 11%;
+  }
 
-.sendTask {
+  .taskssShowOption h3 {
+    font-size: 10px;
+  }
 
-  width: 200px;
-  padding: 5px;
-  gap: 20px;
-  position: absolute;
-  top: 36%;
-  right: 13%;
-}
+  .aaa h1 {
+    font-size: 10px;
+  }
 
-.taskssShowOption h3{
-  font-size: 10px;
-}
+  .listproduct-format-main-bottom {
+    grid-template-columns: 1fr 7fr 1fr 1fr; /* Six equal columns */
+    gap: 35px; /* Spacing between columns */
 
-.aaa h1{
-  font-size: 10px;
-}
+    font-size: 14px;
 
-.listproduct-format-main-bottom {
+    /* Centered text alignment */
+  }
 
-  grid-template-columns: 1fr 7fr 1fr 1fr; /* Six equal columns */
-  gap: 35px; /* Spacing between columns */
+  .listproduct-format-main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Six equal columns */
+    gap: 10px; /* Spacing between columns */
+    padding: 20px 0; /* Top and bottom padding */
+    color: #454544; /* Text color */
+    font-size: 12px;
 
-  font-size: 14px;
- 
-  /* Centered text alignment */
-}
+    /* Centered text alignment */
+  }
 
-.listproduct-format-main {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Six equal columns */
-  gap: 30px; /* Spacing between columns */
-  padding: 20px 0; /* Top and bottom padding */
-  color: #454544; /* Text color */
-  font-size: 12px;
+  .UserCard-container-mid {
+    margin-left: 1px;
 
-  /* Centered text alignment */
-}
-
-  
-
+    gap: 4px;
+  }
 }

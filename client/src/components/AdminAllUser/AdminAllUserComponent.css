@@ -199,10 +199,15 @@
 
 @media (max-width: 500px) {
  
+  .AdminAllUserComponent {
+    padding: 10px 10px;
+ 
+  }
     .alluser-card {
       
         gap: 5px;
-        width: 200px;
+        width: 140px;
+   
        
         padding: 10px;
      
@@ -227,14 +232,30 @@
         position: relative;
       }
 
+     
+
       .amittt {
         display: flex;
         justify-content: flex-start;
-        gap: 24px;
-      
+        gap: 10px;
+  
         flex-wrap: wrap;
+        
       }
 
+     
+        .pagination {
+          flex-wrap: wrap;
+        }
       
+        .page-item {
+          margin: 5px 0;
+        }
+      
+        .page-link {
+          padding: 6px 12px;
+          font-size: 14px;
+        }
+      }
 
-}
+
