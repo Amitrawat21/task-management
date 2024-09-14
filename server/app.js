@@ -1,7 +1,7 @@
 import express from "express";
 import dotenv from "dotenv";
 import "./database/Connection.js";
-import cookieParser from "cookie-parser";
+import cookieParser from "cookie-parser"A
 import cors from "cors";
 import fileUpload from "express-fileupload";
 import userrouter from "./routes/UserRoutes.js";
