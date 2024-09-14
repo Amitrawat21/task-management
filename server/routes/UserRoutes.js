@@ -1,7 +1,7 @@
 import express from "express"
 import UserController from "../controller/UserController.js"
 import Authentication from "../middleware/Auth.js"
-import User from "../Model/userSchema.js"
+
 
 const router = express.Router()
 
